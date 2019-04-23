@@ -7,6 +7,7 @@ before_script:
 
 script:
   - "npm run test-ci"
+  - "npm run test-functional"
 
 after_script:
   - "./stop_server.sh"
