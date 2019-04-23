@@ -1,0 +1,35 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.0"
+  },
+  "scripts": {
+    "start": "BROWSER=none PORT=3000 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test-ci": "CI=true react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "coffeescript": "^2.4.1",
+    "mocha": "^6.1.4",
+    "taiko": "git+https://github.com/tkshnwesper/taiko.git",
+    "taiko-react": "^0.1.3"
+  }
+}
