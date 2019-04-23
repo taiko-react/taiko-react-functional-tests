@@ -13,6 +13,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-ci": "CI=true react-scripts test",
+    "test-functional": "mocha",
     "eject": "react-scripts eject"
   },
   "license": "MIT",
@@ -29,7 +30,7 @@
     "chai": "^4.2.0",
     "coffeescript": "^2.4.1",
     "mocha": "^6.1.4",
-    "taiko": "git+https://github.com/tkshnwesper/taiko.git",
+    "taiko": "git+https://github.com/getgauge/taiko.git",
     "taiko-react": "^0.1.3"
   }
 }
