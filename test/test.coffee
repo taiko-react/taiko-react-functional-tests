@@ -31,9 +31,17 @@ describe 'Functional tests', () ->
     app = await react 'App'
     assert.isTrue app.exists()
   
+  it 'does not find AppABC', ->
+    app = await react 'AppABC'
+    assert.isFalse app.exists()
+  
   it 'successfully finds the <App />', () ->
     app = await react createElement 'App'
     assert.isTrue app.exists()
+  
+  it 'does not find <AppABC />', ->
+    app = await react createElement 'AppABC'
+    assert.isFalse app.exists()
 
 afterHook = () ->
   await closeBrowser()
