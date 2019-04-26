@@ -26,22 +26,40 @@ beforeHook = () ->
 
 before beforeHook
 
-describe 'Functional tests', () ->
-  it 'successfully finds the App', () ->
-    app = await react 'App'
-    assert.isTrue app.exists()
+describe 'Functional tests', ->
+  describe '#exists', ->
+    it 'successfully finds the App', ->
+      app = await react 'App'
+      assert.isTrue app.exists()
+    
+    it 'does not find AppABC', ->
+      app = await react 'AppABC'
+      assert.isFalse app.exists()
+    
+    it 'successfully finds the <App />', ->
+      app = await react createElement 'App'
+      assert.isTrue app.exists()
+    
+    it 'does not find <AppABC />', ->
+      app = await react createElement 'AppABC'
+      assert.isFalse app.exists()
   
-  it 'does not find AppABC', ->
-    app = await react 'AppABC'
-    assert.isFalse app.exists()
-  
-  it 'successfully finds the <App />', () ->
-    app = await react createElement 'App'
-    assert.isTrue app.exists()
-  
-  it 'does not find <AppABC />', ->
-    app = await react createElement 'AppABC'
-    assert.isFalse app.exists()
+  describe '#length', ->
+    it 'finds two Logos', ->
+      logo = await react 'Logo', { multiple: true }
+      assert.equal logo.length(), 2
+
+    it 'finds one App', ->
+      app = await react 'App'
+      assert.equal app.length(), 1
+    
+    it 'does not find Batman', ->
+      batman = await react 'Batman'
+      assert.equal batman.length(), 0
+    
+    it 'does not find multiple Narutos', ->
+      narutos = await react 'Naruto', { multiple: true }
+      assert.equal narutos.length(), 0
 
 afterHook = () ->
   await closeBrowser()
