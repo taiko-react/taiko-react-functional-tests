@@ -1,8 +1,10 @@
+require '@babel/register'
 { get } = require 'http'
 { openBrowser, goto, closeBrowser, loadPlugin } = require 'taiko'
 { assert } = require 'chai'
 { createElement } = require 'react'
 { ID, clientHandler, react } = require 'taiko-react'
+App = (require '../src/App').default
 
 URL = "http://localhost:3000"
 
@@ -28,15 +30,19 @@ before beforeHook
 
 describe 'Functional tests', ->
   describe '#exists', ->
-    it 'successfully finds the App', ->
+    it 'successfully finds the App using a string selector', ->
       app = await react 'App'
+      assert.isTrue app.exists()
+    
+    it 'successfully finds the App using a component class selector', ->
+      app = await react App
       assert.isTrue app.exists()
     
     it 'does not find AppABC', ->
       app = await react 'AppABC'
       assert.isFalse app.exists()
     
-    it 'successfully finds the <App />', ->
+    it 'successfully finds <App />', ->
       app = await react createElement 'App'
       assert.isTrue app.exists()
     
