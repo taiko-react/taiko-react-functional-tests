@@ -6,7 +6,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.0"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "BROWSER=none PORT=3000 react-scripts start",
@@ -27,8 +27,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
