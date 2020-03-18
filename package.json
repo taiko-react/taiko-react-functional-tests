@@ -33,7 +33,7 @@
     "@babel/register": "^7.4.4",
     "chai": "^4.2.0",
     "coffeescript": "^2.4.1",
-    "mocha": "^7.0.1",
+    "mocha": "^7.1.1",
     "taiko": "^1.0.0",
     "taiko-react": "latest"
   }
