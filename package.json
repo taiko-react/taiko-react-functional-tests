@@ -30,7 +30,7 @@
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.1",
-    "@babel/register": "^7.4.4",
+    "@babel/register": "^7.9.0",
     "chai": "^4.2.0",
     "coffeescript": "^2.4.1",
     "mocha": "^7.0.1",
